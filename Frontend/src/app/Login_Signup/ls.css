@@ -1,0 +1,93 @@
+/* 🌈 Full-page gradient background */
+:host, body, html {
+
+  height: 90%;
+  display: grid;
+  place-items: center; /* centers the card */
+  background: linear-gradient(135deg, #cd86ce 0%, #b2f7ef 100%);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* 📦 Centered login/signup card */
+.login-signup-container {
+  max-width: 420px;
+  width: 100%;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* ✨ Heading style */
+.login-signup-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #cd86ce 0%, #b2f7ef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+/* 📑 Form styling */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* 🔗 Toggle links */
+.signup-link {
+  cursor: pointer;
+  margin-top: 12px;
+  font-size: 14px;
+  text-align: center;
+  color: #3f51b5;
+  transition: all 0.3s ease;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+  color: #673ab7;
+}
+
+.signup-link.highlight {
+  color: #e53935;
+  font-weight: 600;
+}
+
+/* 🎨 Buttons */
+button[mat-raised-button] {
+  padding: 10px 0;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+/* Primary button */
+button[color="primary"] {
+  background: linear-gradient(135deg, #cd86ce 0%, #b2f7ef 100%);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button[color="primary"]:hover {
+  opacity: 0.95;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

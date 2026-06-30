@@ -1,0 +1,60 @@
+.dashboard-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Plant card styles remain the same */
+.plant-card { width: 100%; max-width: 500px; margin: 0 auto; background: linear-gradient(135deg, rgba(205, 134, 206, 0.1), rgba(178, 247, 239, 0.1)); }
+.plant-content { display: flex; flex-direction: column; align-items: center; padding: 20px; }
+.plant-visual { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
+.plant-emoji { font-size: 80px; line-height: 1; margin-bottom: 10px; }
+.plant-stage { font-size: 18px; font-weight: 500; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+.progress-container { width: 100%; max-width: 400px; margin-top: 20px; }
+.progress-bar { height: 10px; background-color: #e0e0e0; border-radius: 5px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(135deg, #cd86ce 0%, #b2f7ef 100%); border-radius: 4px; transition: width 0.5s ease; }
+.progress-text { text-align: center; margin-top: 8px; font-size: 14px; color: #555; }
+
+/* Calendar styles */
+.calendar-header { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; width: 100%; max-width: 600px; }
+.week-days { display: flex; gap: 12px; justify-content: center; }
+
+
+.day-name { font-weight: 500; font-size: 14px; }
+.day-date { font-size: 22px; font-weight: bold; margin: 4px 0; }
+.day-points { font-size: 14px; }
+.selected-day { margin-top: 16px; font-weight: 500; font-family:'Times New Roman', Times, serif;}
+.plant-card mat-card-title, mat-card-subtitle{
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 600;                   
+  font-size: 20px;                    
+  color: #4a148c;                  
+}
+.day-card {
+  padding: 10px;
+  margin: 4px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.day-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Highlight today's date */
+.day-card.today {
+  background: linear-gradient(135deg, #cd86ce 0%, #b2f7ef 100%);
+  color: white;
+  font-weight: 600;
+}

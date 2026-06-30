@@ -1,0 +1,36 @@
+  <div class="Welcome">
+  <mat-stepper [linear]="isLinear" #stepper>
+    <!-- Step 1: Welcome Card -->
+  
+  <!-- Step 2: Routed Content (Login/Signup) -->
+
+  <!-- Step 3: Done -->
+  <mat-step>
+    <ng-template matStepLabel>Start</ng-template>
+      <Profile_Setup></Profile_Setup>
+      <div class="step-actions step-actions-footer">
+      <button matButton matStepperNext >Next</button>
+      </div>
+    
+  </mat-step>
+    <mat-step>
+    <ng-template matStepLabel>Activities</ng-template>
+      <activities></activities>
+      <div class="step-actions step-actions-footer">
+      <button matButton matStepperPrevious>Back</button>
+      <button matButton matStepperNext >Next</button>
+      </div>
+      </mat-step>
+      <mat-step>
+      <ng-template matStepLabel>Dashboard</ng-template>
+      <dashboard></dashboard>
+      <div class="step-actions step-actions-footer">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+
+</mat-stepper>
+
+</div>
+<!-- <activitie_s></activitie_s> -->
